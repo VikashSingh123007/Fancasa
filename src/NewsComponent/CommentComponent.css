@@ -1,0 +1,47 @@
+.comment-container {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 0.4rem;
+}
+
+.comment-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: none;
+}
+
+.comment-form button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #2372cc;   /* blue publish look */
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.comment-form button:hover {
+  background: #1b5aa3;
+}

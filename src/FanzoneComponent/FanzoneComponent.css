@@ -1,0 +1,143 @@
+/* FanzoneComponent.css */
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  color: white;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  font-family: "Faster one";
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.product-card {
+  background: linear-gradient(to right, rgba(32, 32, 34, 0.8), rgba(33, 33, 35, 0.2));
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(122, 90, 245, 0.4),
+              0 0 40px rgba(79, 70, 229, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.product-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap; /* allows buttons to wrap on smaller screens */
+}
+
+.product-buttons button {
+  padding: 12px 20px;       /* increased padding for width and height */
+  min-width: 140px;         /* ensure buttons have a minimum width */
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;          /* slightly larger font */
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(90deg, #7a5af5, #4f46e5);
+  color: white;
+  text-align: center;
+}
+
+.product-buttons button:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 15px #7a5af5;
+}
+/* Login popup */
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: linear-gradient(135deg, #7a5af5, #4f46e5);
+  padding: 2rem;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 25px #7a5af5, 0 0 50px #4f46e5;
+  animation: popupGlow 1.5s infinite alternate;
+}
+
+.popup-content h3 {
+  margin-bottom: 1rem;
+  font-size: 22px;
+}
+
+.popup-content p {
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: #4f46e5;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-content button:hover {
+  background: #e0e0ff;
+}
+
+/* Glow animation */
+@keyframes popupGlow {
+  0% {
+    box-shadow: 0 0 20px #7a5af5, 0 0 40px #4f46e5;
+  }
+  100% {
+    box-shadow: 0 0 40px #7a5af5, 0 0 80px #4f46e5;
+  }
+}

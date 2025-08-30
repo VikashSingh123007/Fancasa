@@ -1,0 +1,99 @@
+.News-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  padding: 2rem 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.news-item {
+  position: relative;
+  background: linear-gradient(to right, rgba(32,32,34,0.8), rgba(33,33,35,0.2));
+  border-radius: 16px;
+  max-width: 900px;
+  width: 90%;
+  overflow: hidden;
+
+  /* soft glowing aura */
+  box-shadow: 0 0 20px rgba(122, 90, 245, 0.6),
+              0 0 40px rgba(79, 70, 229, 0.4),
+              0 0 60px rgba(0, 198, 255, 0.3);
+  transition: transform 0.2s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.news-image {
+  width: 100%;
+  height: 300px;           /* fixed height for uniformity */
+  object-fit: cover;       /* fill container without distortion */
+  border-radius: 16px 16px 0 0; /* round top corners only to match card */
+  margin-bottom: 0;        /* no extra space */
+}
+
+.news-content {
+  padding: 16px;           /* spacing for title, description, date */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.news-item::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #7a5af5, #4f46e5, #00c6ff, #7a5af5);
+  background-size: 300% 300%;
+  animation: glowing 6s linear infinite;
+  z-index: -1;
+}
+
+.news-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(to right, rgba(32,32,34,0.9), rgba(33,33,35,0.85));
+  z-index: -1;
+}
+
+@keyframes glowing {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.news-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fefbfb;
+  text-align: center;
+}
+
+.news-image {
+  width: 100%;           /* Make image take full container width */
+  height: auto;          /* Maintain aspect ratio */
+  object-fit: cover;     /* Crop if needed to fill space */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.news-description {
+  font-size: 1rem;
+  color: #fcf6f6;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.publishedDate {
+  font-size: 0.9rem;
+  color: #fcfcfc;
+}

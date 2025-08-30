@@ -1,0 +1,42 @@
+/* Pagination container */
+.pagination {
+  display: flex;               /* Arrange items in a row */
+  justify-content: center;     /* Center align horizontally */
+  align-items: center;         /* Align vertically */
+  list-style: none;            /* Remove bullet points */
+  padding: 0;
+  margin: 20px 0;
+}
+
+/* Each page item */
+.page-item {
+  margin: 0 5px;               /* Space between buttons */
+  cursor: pointer;
+}
+
+/* Page link styling */
+.page-link {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #007bff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.page-link:hover {
+  background-color: #f1f1f1;
+  border-color: #007bff;
+  color: #0056b3;
+}
+
+/* Active page styling */
+.page-item.active .page-link {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  font-weight: bold;
+}

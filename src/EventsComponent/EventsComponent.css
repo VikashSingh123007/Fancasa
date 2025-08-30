@@ -1,0 +1,132 @@
+.events-container {
+  background-color: #0f2027;
+  min-height: 100vh;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 75rem;
+  position: relative;
+}
+
+.event-image img {
+  width: 20rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 15px rgba(122, 90, 245, 0.5),
+              0 0 25px rgba(79, 70, 229, 0.3);
+}
+
+.Event-Info {
+  flex: 1;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 1rem;
+  border-radius: 0.6rem;
+  color: rgb(255, 255, 255);
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(122, 90, 245, 0.5), 
+              0 0 25px rgba(79, 70, 229, 0.3);
+}
+
+/* glowing border */
+.Event-Info::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 0.8rem;
+  background: linear-gradient(90deg, #7a5af5, #4f46e5, #00c6ff, #7a5af5);
+  background-size: 300% 300%;
+  animation: glowing 6s linear infinite;
+  z-index: -1;
+}
+
+.Event-Info::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.6rem;
+  background: linear-gradient(
+    to right,
+    rgba(15, 32, 39, 0.95),
+    rgba(32, 58, 67, 0.9),
+    rgba(44, 83, 100, 0.85)
+  );
+  z-index: -1;
+}
+
+@keyframes glowing {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  top:5rem;
+  cursor: pointer;
+  color: #f9f6f6;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  box-shadow: 0 0 12px rgba(122, 90, 245, 0.6), 
+              0 0 20px rgba(79, 70, 229, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+/* glowing border effect */
+.button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #7a5af5, #4f46e5, #00c6ff, #7a5af5);
+  background-size: 300% 300%;
+  animation: glowing 6s linear infinite;
+  z-index: -1;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  z-index: -1;
+}
+
+.button:hover {
+  color: rgb(87, 168, 194);
+  box-shadow: 0 0 20px rgba(122, 90, 245, 0.9), 
+              0 0 40px rgba(79, 70, 229, 0.7);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: "Faster One", cursive;
+  letter-spacing: 2px;
+  font-weight: 200;
+  color: aliceblue;
+  text-align: center;
+  width: 100%;
+}

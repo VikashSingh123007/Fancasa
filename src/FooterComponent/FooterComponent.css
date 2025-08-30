@@ -1,0 +1,26 @@
+.FooterContainer {
+background-color: #222;
+padding: 20px;
+text-align: center;
+}
+
+.footerele {
+list-style: none;
+padding: 0;
+margin: 0;
+display: inline-flex;
+justify-content: center;
+gap: 30px;
+}
+
+.elements {
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+transition: color 0.3s ease;
+text-decoration: none;
+}
+
+.elements:hover {
+color: #00bcd4;
+}

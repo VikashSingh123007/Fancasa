@@ -1,0 +1,111 @@
+/* CheckoutComponent.css */
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  color: white;
+}
+
+.checkout-container h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  background: linear-gradient(to right, rgba(32, 32, 34, 0.8), rgba(33, 33, 35, 0.2));
+  padding: 1rem;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 90%;           /* almost full width */
+  max-width: 900px;     /* increased from 600px */
+  margin-left: auto;    /* center horizontally */
+  margin-right: auto;   /* center horizontally */
+
+  box-shadow: 0 0 20px rgba(122, 90, 245, 0.4),
+              0 0 40px rgba(79, 70, 229, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.cart-item:hover {
+  transform: scale(1.02); /* subtle zoom on hover */
+}
+
+.cart-item input {
+  width: 60px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  background: #2a2a2d;
+  color: white;
+  text-align: center;
+}
+
+.cart-item input:focus {
+  outline: 2px solid #7a5af5;
+}
+
+.checkout-summary {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.checkout-summary h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.checkout-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #7a5af5, #4f46e5);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkout-button:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 15px #7a5af5;
+}
+/* Delete button style */
+.delete-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ff4d4f, #d9363e);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 12px #ff4d4f;
+}
+
+/* Adjust cart-item to include buttons nicely */
+.cart-item span,
+.cart-item input,
+.cart-item button {
+  margin: 0 6px;
+}
+
+.cart-item {
+  flex-wrap: wrap;
+  gap: 10px; /* spacing between elements */
+}

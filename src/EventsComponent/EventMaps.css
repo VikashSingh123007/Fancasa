@@ -1,0 +1,31 @@
+
+.event-map {
+  width: 20%;          
+  max-width: 20rem;    
+  height: 17rem;    
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 1rem auto;   
+  top:-2.6rem;
+  background-color: #333;
+}
+
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  background: #f5f3f3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #f7f4f4;
+  padding: 6px 10px;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff;
+}
+
+
+.leaflet-marker-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}

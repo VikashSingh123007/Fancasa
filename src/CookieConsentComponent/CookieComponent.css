@@ -1,0 +1,51 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #202c2a;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: fadeIn 0.8s ease-in;
+  z-index: 1000;
+}
+
+.cookie-banner p {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+}
+
+.cookie-banner .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-banner button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cookie-banner button:first-child {
+  background: #2372cc;
+  color: white;
+}
+
+.cookie-banner button:last-child {
+  background: #555;
+  color: white;
+}
+
+.cookie-banner button:hover {
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}

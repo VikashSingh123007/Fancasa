@@ -1,0 +1,191 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* dark background */
+  font-family: "Poppins", sans-serif;
+}
+.login-box {
+  position: relative;
+  background: linear-gradient(to right, rgba(32, 32, 34, 0.8), rgba(33, 33, 35, 0.2));
+  padding: 2rem;
+  border-radius: 16px;
+  width: 350px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+
+  /* soft glowing aura */
+  box-shadow: 0 0 20px rgba(122, 90, 245, 0.6),
+              0 0 40px rgba(79, 70, 229, 0.4),
+              0 0 60px rgba(0, 198, 255, 0.3);
+}
+
+/* glowing animated border */
+.login-box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #7a5af5, #4f46e5, #00c6ff, #7a5af5);
+  background-size: 300% 300%;
+  animation: glowing 6s linear infinite;
+  z-index: -1;
+}
+
+/* overlay inside to preserve dark background */
+.login-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(to right, rgba(32, 32, 34, 0.9), rgba(33, 33, 35, 0.85));
+  z-index: -1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.login-title {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.login-label {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.login-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+/* Username + Password wrapper */
+.login-field {
+  margin-bottom: 19px;
+  text-align: left;
+}
+
+/* Labels for Username + Password */
+/* Works directly with your current JSX */
+.login-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #2a2a2d;
+  color: white;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 12px; /* add spacing between inputs */
+}
+
+.login-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #7a5af5;
+  background: #333;
+}
+
+
+.login-field input:focus {
+  outline: none;
+  box-shadow: 0 0 8px #7a5af5;
+  background: #333;
+}
+
+.login-select {
+  width: 80px;
+  padding: 8px;
+  border: none;
+  background: #2a2a2d;
+  color: white;
+  border-radius: 6px;
+}
+
+.login-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: #2a2a2d;
+  color: white;
+  border-radius: 6px;
+}
+
+.login-input:focus,
+.login-select:focus {
+  outline: 2px solid #7a5af5; /* purple gradient focus */
+}
+
+.login-error {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.login-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #7a5af5, #4f46e5);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 15px #7a5af5;
+}
+
+.guest-link {
+  margin-top: 15px;
+}
+
+.guest-link a {
+  color: #bbb;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.login-footer {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+.login-footer a {
+  color: #7a5af5;
+  text-decoration: underline;
+}
